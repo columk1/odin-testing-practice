@@ -16,14 +16,14 @@ test('Uppercase with wrapping from Z to A', () => {
   expect(caesarCypher('Z', 1)).toBe('A')
 })
 
-test('Mixed case: (Zz, 1) => Aa', () => {
+test('Mixed case', () => {
   expect(caesarCypher('Zz', 1)).toBe('Aa')
 })
 
-test('Includes non alphabetical characters: (g#Y7, 1) => h#Z7', () => {
+test('Includes non alphabetical characters', () => {
   expect(caesarCypher('g# Y7.', 1)).toBe('h# Z7.')
 })
 
-test('(545905, 1) => "not a string"', () => {
+test('Input is not a string', () => {
   expect(caesarCypher(545905, 1)).toBe('not a string')
 })
